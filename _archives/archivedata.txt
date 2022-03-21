@@ -1,0 +1,9 @@
+---
+---
+{
+"years": [
+    {%- for post in site.posts -%}
+    "{{ post.date | date: "%Y" }}"{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+]
+}
