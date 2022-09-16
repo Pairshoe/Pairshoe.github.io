@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+清华大学计算机系本科生
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+进行一些记录和总结, 为了更好地回忆和前进.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[torcviwang@gmail.com](mailto:torcviwang@gmail.com)
