@@ -1,56 +1,236 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tuowei Wang</title>
+    <meta name="author" content="Tuowei Wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
 
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% endif %}
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+      <tr style="padding:0px">
+      <td style="padding:0px">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <h1>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr style="padding:0px">
+          <td style="padding:2.5%;width:35%;max-width:40%">
+            <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 0%;" alt="profile photo" src="images/self.jpeg" class="hoverZoomLink">
+          </td>
+          <td style="padding:2.5%;width:65%;vertical-align:middle">
+            <p class="name" style="text-align: center; margin-bottom: 20px;">
+              Wang Tuowei「王 拓为」
+            </p>
+            <p>
+              Hello! I am a second-year Ph.D. student in the <a style="color: #B86C99; font-weight: bold;">Department of Computer Science and Technology</a> 
+              at <a style="color: #B86C99; font-weight: bold;">Tsinghua University</a>, advised by associate professor 
+              <a href="https://juren1987.github.io">Ju Ren</a>. I hold dual B.S. degrees in Computer Science and Finance, both from Tsinghua University.
+            </p>
+            <p>
+              My research interests include high-performance computing, machine learning system, and large-scale AI4Science system.
+            </p>
+            <p>
+              Feel free to contact me if you have any questions, want to discuss research ideas, or just talk about... life.
+            </p>
+            <p>
+              My Email: wtw23 [AT] mails.tsinghua.edu.cn
+            </p>
+            <p style="text-align:center">
+              <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
+              <a href="https://scholar.google.com/citations?user=H72C_W8AAAAJ">Scholar</a> &nbsp;/&nbsp;
+              <a href="https://github.com/Pairshoe/">Github</a> &nbsp;/&nbsp;
+              <a href="https://www.zhihu.com/people/wo-you-shuang-pian-xie-54">ZhiHu</a>
+            </p>
+          </td>
+          </tr>
+          </tbody>
+        </table>
 
-      <div>
-        <span class="date">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <h2>Publications</h2>
+          </td>
+          </tr>
+          </tbody>
+        </table>
 
-        <ul class="tag">
-          {% for tag in post.tags %}
-          <li>
-            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-              {{ tag }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding:20px;width:80%;vertical-align:middle">
+            <span class="papertitle">Ripple: Accelerating LLM Inference on Smartphones with Correlation-Aware Neuron Management</span>
+            <p>
+              <a style="color: #B86C99; font-weight: bold;">Tuowei Wang*</a>, 
+              Ruwen Fan*, Minxing Huang, Zixu Hao, Kun Li, Ting Cao, Youyou Lu, Yaoxue Zhang, Ju Ren
+            <br>
+              <a href="https://arxiv.org/abs/2410.19274">[Paper]</a>
+              <em>arXiv</em>, 2024
+            </p>
+            <p>
+              We propose <a style="color: #000000; font-style: italic;">Ripple</a>, a novel approach that accelerates LLM inference on smartphones by optimizing neuron placement in flash memory.
+            </p>
+          </td>
+          </tr>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+          <tr>
+            <td style="padding:20px;width:80%;vertical-align:middle">
+              <span class="papertitle">Long Exposure: Accelerating Parameter-Efficient Fine-Tuning for LLMs under Shadowy Sparsity</span>
+              <p>
+                <a style="color: #B86C99; font-weight: bold;">Tuowei Wang*</a>, 
+                Kun Li*, Zixu Hao, Donglin Bai, Ju Ren, Yaoxue Zhang, Ting Cao, Mao Yang
+              <br>
+                <a href="https://sc24.conference-program.com/presentation/?id=pap377&sess=sess398">[Paper]</a>
+                <em>SC</em>, 2024
+              </p>
+              <p>
+                We propose <a style="color: #000000; font-style: italic;">Long Exposure</a>, an efficient system to accelerate parameter-efficient fine-tuning (PEFT) 
+                for LLMs under a nuanced form of sparsity we term <a style="color: #000000; font-style: italic;">Shadowy Sparsity</a>.
+              </p>
+            </td>
+            </tr>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+            <tr>
+            <td style="padding:20px;width:80%;vertical-align:middle">
+              <span class="papertitle">GAuV: A Graph-Based Automated Verification Framework for Perfect Semi-Honest Security of Multiparty Computation Protocols</span>
+              <p>
+                Xingyu Xie, Yifei Li, Wei Zhang, 
+                <a style="color: #B86C99; font-weight: bold;">Tuowei Wang</a>, 
+                Shizhen Xu, Jun Zhu, Yifan Song
+              <br>
+                <a href="https://www.computer.org/csdl/proceedings-article/sp/2024/313000a131/1Ub23P5FxFC">[Paper]</a>
+                <em>SP</em>, 2024
+              </p>
+            </td>
+            </tr>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <span class="prev">
-      <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="prev">
-        &#xE000; Previous
-      </a>
-    </span>
-  {% endif %}
-  {% if paginator.next_page %}
-    <span class="next">
-      <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">
-        Next &#xE001;
-      </a>
-    </span>
-  {% endif %}
-</div>
+            <tr>
+            <td style="padding:20px;width:80%;vertical-align:middle">
+              <span class="papertitle">FedINC: An Exemplar-Free Continual Federated Learning Framework with Small Labeled Data</span>
+              <p>
+                Yongheng Deng, Sheng Yue, 
+                <a style="color: #B86C99; font-weight: bold;">Tuowei Wang</a>, 
+                Guanbo Wang, Ju Ren, Yaoxue Zhang
+              <br>
+                <a href="https://dl.acm.org/doi/abs/10.1145/3625687.3625800">[Paper]</a>
+                <em>SenSys</em>, 2023
+              </p>
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:20px;width:80%;vertical-align:middle">
+              <span class="papertitle">Optimizing DNNs With Partially Equivalent Transformations and Automated Corrections</span>
+              <p>
+                Haojie Wang, Jidong Zhai, Mingyu Gao, Feng Zhang,
+                <a style="color: #B86C99; font-weight: bold;">Tuowei Wang</a>, 
+                Zixuan Ma, Shizhi Tang, Liyan Zheng, Wen Wang, Kaiyuan Rong, Yuanyong Chen, Zhihao Jia
+              <br>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10233187">[Paper]</a>
+                <em>TC</em>, 2023
+              </p>
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:20px;width:80%;vertical-align:middle">
+              <span class="papertitle">EINNET: Optimizing tensor programs with Derivation-Based transformations</span>
+              <p>
+                Liyan Zheng, Haojie Wang, Jidong Zhai, Muyan Hu, Zixuan Ma,
+                <a style="color: #B86C99; font-weight: bold;">Tuowei Wang</a>, 
+                Shuhong Huang, Xupeng Miao, Shizhi Tang, Kezhao Huang, Zhihao Jia
+              <br>
+                <a href="https://www.usenix.org/conference/osdi23/presentation/zheng">[Paper]</a>
+                <em>OSDI</em>, 2023
+              </p>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <h2>Competitions</h2>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding-left:20px;padding-right:20px;width:80%;vertical-align:middle">
+            <p>
+              National College Student Information Security Context, <a style="color: #000000; font-style: italic;">First Prize</a> (2023)
+            </p>
+            <p>
+              National College Student Computer System Development Capability Competition, <a style="color: #000000; font-style: italic;">First Prize</a> (2022)
+            </p>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <h2>Awards</h2>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding-left:20px;padding-right:20px;width:80%;vertical-align:middle">
+            <p>
+              Outstanding Graduate of the Department, Tsinghua University (2023)
+            </p>
+            <p>
+              Comprehensive Excellence Scholarship, Tsinghua University (2022)
+            </p>
+            <p>
+              Excellence Scholarship of Sports and Literary, Tsinghua University (2021)
+            </p>
+            <p>
+              Comprehensive Excellence Scholarship, Tsinghua University (2020)
+            </p>
+            <p>
+              Comprehensive Excellence Scholarship, Tsinghua University (2019)
+            </p>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+          <tr>
+          <td style="padding:0px">
+            <br>
+            <p style="text-align:right;font-size:normal;">
+              <a href="https://hits.seeyoufarm.com">
+                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fpairshoe.github.io&count_bg=%23B86C99&title_bg=%2365516A&title=hits&edge_flat=false"/>
+              </a>
+            <br>
+              Updated at October, 2024.
+              Template from <a href="https://jonbarron.info/" style="text-align:right;font-size:normal;" target="_blank">Jon Barron</a>.
+            </p>
+          </td>
+          </tr>
+          </tbody>
+        </table>
+      </td>
+      </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
